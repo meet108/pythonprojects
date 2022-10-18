@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit_Update</title>
+</head>
+<body>
+<h1>Edit Page</h1>
+<form action="/admin/update_category" method="POST">
+    {% for i in data %}
+        <table>
+            <tr>
+                <td>
+                    CategoryName:
+                </td>
+                <td>
+                    <input type="text" name="categoryName"
+                           value="{{ i['category_name'] }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Description:
+                </td>
+                <td>
+                    <textarea
+                            name="categoryDescription">{{ i['category_description'] }}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Submit:
+                    <input type="submit" value="Submit">
+                    <input type="hidden" name="categoryId"
+                           value="{{ i['category_id'] }}">
+                </td>
+            </tr>
+
+        </table>
+    {% endfor %}
+</form>
+
+</body>
+</html>

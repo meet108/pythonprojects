@@ -1,0 +1,15 @@
+s="this is string example"
+
+1)reverse the string
+
+2) word wise reverse
+
+3) 2 characters interchange
+
+4)	space split
+	join the string with *
+
+
+5) replace is -> was
+		substring->this this
+					is  was

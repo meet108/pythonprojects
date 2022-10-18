@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Product</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Product Image</td>
+        <td>Product name</td>
+        <td>Product description</td>
+        <td>Category name</td>
+        <td>Subcategory name</td>
+        <td>Action</td>
+    </tr>
+    <tr>
+        {% for i in product_vo_list %}
+            <td><a href="
+
+                    {{ i[2]['product_image_path'] }}{{ i[2]['product_image_name'] }}">View
+                Image</a></td>
+            <td>{{ i[2]['product_name'] }}</td>
+            <td>{{ i[2]['product_description'] }}</td>
+            <td>{{ i[0]['category_name'] }}</td>
+            <td>{{ i[1]['subcategory_name'] }}</td>
+            <td>
+                <a href="/admin/edit-product?productId={{ i[2]['product_id'] }}">Edit</a>
+            </td>
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>

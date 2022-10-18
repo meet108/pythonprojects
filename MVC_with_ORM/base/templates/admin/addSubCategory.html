@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sub Category</title>
+</head>
+<body>
+<h1>
+    <center>Welcome</center>
+</h1>
+    <form action="/admin/insert_subcategory" , method="post">
+<table border="1px">
+            <tr>
+                <td>
+                    Subcategory Name:
+                </td>
+                <td>
+                        <select name="subcategoryCategoryId">
+                        <option disabled selected>Select value</option>
+                        {% for i in category_vo_list %}
+                        <option value="{{ i['category_id']}}">{{ i['category_name']}}</option>
+                        {% endfor %}
+                        </select>
+                <label>
+                    <input type="text" name="subcategoryName"><br>
+                </label>
+                </td>
+            <tr>
+                <td>
+                    Subcategory Description:
+                </td>
+                <td>
+                    <input type="text" name="subcategoryDescription"><br>
+                </td>
+            </tr>
+        </table>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

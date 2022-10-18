@@ -1,0 +1,6 @@
+user will input the string
+
+1) word wise reverse
+
+2) two characters interchange
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <script type="text/javascript">
+
+        function loadSubCategoryProduct() {
+            var productCategoryId = document.getElementById("productCategoryId");
+            var productSubcategoryId = document.getElementById("productSubcategoryId");
+
+            productSubcategoryId.innerHTML = "";
+
+            var ajax = new XMLHttpRequest();
+
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4) {
+                    alert(ajax.responseText);
+
+                    var json = JSON.parse(ajax.responseText);
+
+                    for (var i = 0; i < json.length; i++) {
+
+                        var option = document.createElement("option");
+                        option.value = json[i].subcategory_id;
+                        option.text = json[i].subcategory_name;
+                        productSubcategoryId.options.add(option);
+                    }
+                }
+            };
+            ajax.open("get", "/admin/ajax_subcategory_product?productCategoryId=" + productCategoryId.value, true);
+            ajax.send();
+        }
+
+    </script>
+</head>
+<body>
+<form>
+    <label>Category</label>
+    <select name="productSubcategoryId" id="productCategoryId"
+            onchange="loadSubCategoryProduct()">
+        <option>Select Category</option>
+        {% for i in category_vo_list %}
+            <option value="{{ i['category_id'] }}">{{ i['category_name'] }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    {{ subcategory_vo_list }}
+    <label>Subcategory</label>
+    <select name="productSubcategoryId" id="productSubcategoryId">
+        <option>Select Subcategory</option>
+        {% for i in subcategory_vo_list %}
+            <option value="{{ i['subcategory_id'] }}">{{ i['subcategory_name'] }}</option>
+        {% endfor %}
+    </select>
+    <tr>
+        <td>Product Name
+        </td>
+        <td>
+            <input type="text" name="productName"><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Product Description:
+        </td>
+        <td>
+            <input type="text" name="productDescription"><br>
+        </td>
+    <tr>
+        <td>
+            Upload Product image:
+        </td>
+        <td>
+            <input type="file" name="productImage">
+        </td>
+    </tr>
+    </table>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

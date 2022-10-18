@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PageTwo</title>
+</head>
+<body>
+{% if 'k1' in session %}
+    {{ session.get("k1") }}
+{% endif %}
+</body>
+</html>
