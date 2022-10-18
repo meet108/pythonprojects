@@ -1,0 +1,34 @@
+BankInfo
+    fn
+    ln
+    gender
+    address
+
+BankAccount
+    acno
+    amount
+    object_BankInfo
+
+Saving
+    minAmount = 10000
+    rate=6%
+
+Current
+    minAmount = 5000
+    rate=No
+
+Main
+
+    user will input data for BankInfo-C
+
+    user will input data for BankAccount-C
+
+    user will select Saving or Current
+
+    validate the amount given by user- give 3 chances-F
+
+    input months
+
+    calculate the interest-F
+
+

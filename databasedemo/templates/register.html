@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+<form action="/register" method="POST">
+    <td>
+        FirstName:
+        <input type="text" name="fn">
+    </td>
+    <br>
+    <td>
+        LastName:
+        <input type="text" name="ln">
+    </td>
+    <br>
+    <td>
+        UserName:
+        <input type="text" name="un" >
+    </td>
+    <br>
+    <td>
+        Password:
+        <input type="password" name="pw">
+    </td>
+    <br>
+    <td>
+        Address:
+        <td width="200px"></td>
+        <td><textarea cols="45" rows="4" name="ad"></textarea></td>
+    </td>
+    <br>
+    <td>
+        Gender:
+        <input type="radio" name="gender" value="Male ">Male
+        <input type="radio" name="gender" value="Female ">Female
+    </td>
+    <br>
+    <td>
+        City:
+        <label for="city">Choose a City</label>
+        <select name="city" id="city">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+        </select>
+    </td>
+    <br>
+    <td>
+        Hobbies:
+        <input type="checkbox" name="hobby" value="Cricket">Cricket<br>
+        <input type="checkbox" name="hobby" value="Volleyball">Volleyball<br>
+        <input type="checkbox" name="hobby" value="Badminton">Badminton<br>
+    </td>
+    <br>
+    <td>
+        Submit:
+        <input type="submit" value="Submit">
+    </td>
+
+</form>
+<a href="/view">View</a>
+</body>
+</html>

@@ -1,0 +1,77 @@
+1) user input a character
+
+	a->"you have enter a"
+	
+	b->"you have enter b"
+	
+	c->"you have enter c"
+	
+	->Invalid character
+
+
+2)user input a number
+
+	positive number
+		odd number
+			perform addition with an integer constant
+	
+		even number
+			perform multiplication with an floating point constant
+	
+	negative number
+		odd number
+			perform subtraction with an integer constant
+		
+		even number
+			perform division with an floating point constant
+
+3)user input marks
+
+	90 to 100->A grade
+	
+	80 to 90->B grade
+	
+	60 to 80->C grade
+	
+	40 to 60->D grade
+	
+	< 40     ->Fail
+	
+	>100 	->Invalid Marks
+
+user will input no of rows
+1
+1 1
+1 1 1
+1 1 1 1
+1 1 1 1 1
+
+1
+2 3
+4 5 6
+7 8 9 10
+
+* * * * *
+* * * *
+* * *
+* *
+*
+     *	
+    * *
+   * * *
+  * * * *
+ * * * * *
+
+diamond pattern
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+
+user will input number
+factorial program -> while loop

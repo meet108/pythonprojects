@@ -1,0 +1,20 @@
+user will input data for SignUp class-Constructor
+    fn,ln,un,pwd
+
+    pwd must fulfil below given criteria
+        minmum 8 characters
+        maximum 16 characters
+        at least one lowercase
+        at least one uppercase
+        at least one digit
+        at least one special character
+    if not matched then print custom message with exception
+    and give chance again till condition not satisfied
+
+user will input data for SignIn class-Constructor
+    un,pwd
+
+    compare SignUp (un and pwd) with (SignIn un and pwd)
+        loginCheck()-Function
+        if not matched then print custom message with exception
+        else print welcome message with fn and ln

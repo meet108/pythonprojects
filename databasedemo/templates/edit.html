@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<form action="/update" method="POST">
+    {% for i in data %}
+        <table>
+        <tr>
+            <td>
+                FirstName:
+            </td>
+            <td>
+                <input type="text" name="fn"
+                value="{{ i['Firstname'] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                LastName:
+            </td>
+            <td>
+                <input type="text" name="ln"
+                value="{{ i['Lastname'] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                UserName:
+            </td>
+            <td>
+                <input type="text" name="un"
+                value="{{ i['Username'] }}">
+            </td>
+        </tr>
+{#        <tr>#}
+{#            <td>#}
+{#                Password:#}
+{#            </td>#}
+{#            <td>#}
+{#                <input type="password" name="pw"#}
+{#                value="{{ i['Password'] }}">#}
+{#            </td>#}
+{#        </tr>#}
+        <tr>
+            <td>
+                Address:
+                <td><textarea cols="45" rows="4" name="ad">{{ i['Address'] }}</textarea></td>
+            </td>
+        </tr>
+{#        <tr>#}
+{#             <td>#}
+{#                Gender#}
+{#            </td>#}
+{#                <td>#}
+{#                {% if i['Gender']=='Male' %}#}
+{#                    <input type="radio" name="gender" value="Male "checked>Male#}
+{#                    <input type="radio" name="gender" value="Female ">Female#}
+{#                {% endif %}#}
+{##}
+{#                {% if i['Gender']=='Female' %}#}
+{#                    <input type="radio" name="gender" value="Male ">Male#}
+{#                    <input type="radio" name="gender" value="Female "checked>Female#}
+{#                {% endif %}#}
+{##}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td>#}
+{#                City:#}
+{#            </td>#}
+{#            <td>#}
+{#                <label for="city">Choose a City</label>#}
+{#                <select name="city" id="city">#}
+{#                    <option value="Ahmedabad">Ahmedabad</option>#}
+{#                    <option value="Mumbai">Mumbai</option>#}
+{#                    <option value="Delhi">Delhi</option>#}
+{#                    <option value="Pune">Pune</option>#}
+{#                </select>#}
+{#            </td>#}
+{#        </tr>#}
+{#        <tr>#}
+{#            <td>#}
+{#                Hobbies:#}
+{#            </td>#}
+{#            <td>#}
+{#                <input type="checkbox" name="hobby" value="Cricket">Cricket<br>#}
+{#                <input type="checkbox" name="hobby" value="Volleyball">Volleyball<br>#}
+{#                <input type="checkbox" name="hobby" value="Badminton">Badminton<br>#}
+{#            </td>#}
+{#        </tr>#}
+        <tr>
+            <td>
+                Submit:
+                <input type="submit" value="Submit">
+                <input type="hidden" name="id" value="{{ i['id'] }}">
+            </td>
+        </tr>
+
+        </table>
+    {% endfor %}
+</form>
+{#<a href="/view">View</a>#}
+</body>
+</html>

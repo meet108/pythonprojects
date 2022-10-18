@@ -1,0 +1,32 @@
+Register-Login 
+
+Register.html
+
+fn
+ln
+un
+pwd
+
+Login.html
+
+un
+pwd
+
+Welcome.html
+
+	Welcome, fn ln
+
+--------------------Notes-------------------
+
+1)by Default Login.html will open
+
+2)register page Link in Login.html
+
+3)after successful registration return to Login.html
+	->empty field message in red colour
+
+4)separate messages for wrong username & wrong password in red colour
+
+5)after sucessful logged in return to Welcome.html
+
+6)Welcome.html page message in green colour 

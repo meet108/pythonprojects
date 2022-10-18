@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Data</title>
+</head>
+<body>
+ <table border="1px">
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Username</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Hobby</th>
+            <th>Action</th>
+     {% for i in data %}
+            <tr>
+                <td>{{ i['Firstname'] }}</td>
+                <td>{{ i['Lastname'] }}</td>
+                <td>{{ i['Username'] }}</td>
+                <td>{{ i['Address'] }}</td>
+                <td>{{ i['Gender'] }}</td>
+                <td>{{ i['City'] }}</td>
+                <td>{{ i['Hobby'] }}</td>
+                <td><a href="/delete?id={{ i['id'] }}">Delete</a></td>
+                <td><a href="/edit?id={{ i['id'] }}">Edit</a></td>
+            </tr>
+     {% endfor %}
+ </table>
+</body>
+</html>
